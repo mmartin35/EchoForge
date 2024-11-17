@@ -1,4 +1,4 @@
-🌟 EchoForge Launcher
+# 🌟 EchoForge Launcher
 
 EchoForge Launcher is a JavaFX application featuring a custom UI with a styled top bar, rounded corners, a blurred background, and interactive buttons (close, minimize, etc.). This project is built using JavaFX and Maven.
 🛠️ Technologies Used
@@ -8,7 +8,7 @@ EchoForge Launcher is a JavaFX application featuring a custom UI with a styled t
     Java 21: Java version used for this project.
     TilesFX: Library for creating dynamic visual elements.
 
-📂 Correct Project Structure
+# 📂 Correct Project Structure
 
 Your project should follow the standard Maven directory layout to avoid issues with resource loading and other configurations. Here's how the structure should look:
 
@@ -34,7 +34,7 @@ EchoForgeLauncher/
 └── README.md
 ```
 
-🚀 How to Run the Application
+# 🚀 How to Run the Application
 Prerequisites
 
     Java 21 or later
@@ -63,7 +63,7 @@ Run the application:
 
     mvn javafx:run
 
-📦 Maven Dependencies
+# 📦 Maven Dependencies
 
 All dependencies are managed in the pom.xml file. Key dependencies include:
 
@@ -85,7 +85,7 @@ All dependencies are managed in the pom.xml file. Key dependencies include:
     </dependency>
 </dependencies>
 
-📜 Features
+# 📜 Features
 
     Custom Interface:
         Rounded corners.
@@ -100,7 +100,7 @@ All dependencies are managed in the pom.xml file. Key dependencies include:
     Main Container with a Button:
         "Connect" button with a sample action.
 
-🛠️ Customization
+# 🛠️ Customization
 
     Change the Background Image: Replace the back-launcher.png file in the resources/fr/lakios/echoforgelauncher directory.
 
@@ -108,7 +108,7 @@ All dependencies are managed in the pom.xml file. Key dependencies include:
 
     Modify Styles: The style.css file contains the style rules. You can adjust colors, border radii, transparency, and more.
 
-🚑 Troubleshooting
+# 🚑 Troubleshooting
 
     Error FXML file not found:
         Make sure the tiles.fxml file exists in src/main/resources/fr/lakios/echoforgelauncher/.
@@ -121,10 +121,11 @@ All dependencies are managed in the pom.xml file. Key dependencies include:
     Transparency/Blur Issues:
         Ensure your operating system supports transparent and blurred windows.
 
-📜 License
+# 📜 License
 
 This project is licensed under the MIT License. Feel free to use, modify, and distribute it, as long as proper credit is given.
-✨ Author
 
-Quentinosaure57 aka Lakios
+# ✨ Author
+
+Quentinosaure57 aka Lakios and mmartin35
 Feel free to reach out for questions or suggestions. 😊
