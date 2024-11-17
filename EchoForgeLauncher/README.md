@@ -1,4 +1,4 @@
-EchoForge Launcher
+🌟 EchoForge Launcher
 
 EchoForge Launcher is a JavaFX application featuring a custom UI with a styled top bar, rounded corners, a blurred background, and interactive buttons (close, minimize, etc.). This project is built using JavaFX and Maven.
 🛠️ Technologies Used
@@ -8,8 +8,11 @@ EchoForge Launcher is a JavaFX application featuring a custom UI with a styled t
     Java 21: Java version used for this project.
     TilesFX: Library for creating dynamic visual elements.
 
-📂 Project Structure
+📂 Correct Project Structure
 
+Your project should follow the standard Maven directory layout to avoid issues with resource loading and other configurations. Here's how the structure should look:
+
+```
 EchoForgeLauncher/
 ├── src/
 │   ├── main/
@@ -29,6 +32,7 @@ EchoForgeLauncher/
 │   │                   └── style.css
 ├── pom.xml
 └── README.md
+```
 
 🚀 How to Run the Application
 Prerequisites
@@ -53,7 +57,7 @@ cd EchoForgeLauncher
 
 Compile the project:
 
-mvn clean compile
+    mvn clean compile
 
 Run the application:
 
@@ -122,5 +126,5 @@ All dependencies are managed in the pom.xml file. Key dependencies include:
 This project is licensed under the MIT License. Feel free to use, modify, and distribute it, as long as proper credit is given.
 ✨ Author
 
-Lakios
+Quentinosaure57 aka Lakios
 Feel free to reach out for questions or suggestions. 😊
