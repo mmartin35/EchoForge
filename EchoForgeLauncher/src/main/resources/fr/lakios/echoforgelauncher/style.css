@@ -1,0 +1,24 @@
+.root {
+    -fx-background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    -fx-background-radius: 20; /* Coins arrondis */
+}
+
+.image-view {
+    -fx-opacity: 0.8; /* Transparence de l'image */
+    -fx-background-radius: 20; /* Coins arrondis pour l'image */
+}
+
+#tileContainer {
+    -fx-background-radius: 10; /* Coins arrondis pour le conteneur interne */
+    -fx-background-color: rgba(0, 0, 0, 0.3); /* Transparence */
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
