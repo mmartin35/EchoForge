@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <form class="nav-item" method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+            <a href="javascript:;" onclick="parentNode.submit()">Déconnection de {{ request.user.username }}</a>
+        </form>
+        <a href='combine_box'>combine_box</a>
+    </body>
+</html>
