@@ -27,12 +27,13 @@
     </tbody>
 </table>
 <div class="btn-group">
-    <form method="post" id="combine_form">
+    <form method="post">
         {% csrf_token %}
         <button type="submit" name="direction" value="0" class="btn btn-primary">Right</button>
         <button type="submit" name="direction" value="1" class="btn btn-primary">Down</button>
         <button type="submit" name="direction" value="2" class="btn btn-primary">Left</button>
         <button type="submit" name="direction" value="3" class="btn btn-primary">Up</button>
+        <button type="submit" name="is_reset" value="True" class="btn btn-secondary">Reset</button>
     </form>
 </div>
 {% endblock %}

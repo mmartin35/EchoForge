@@ -1,19 +1,14 @@
 import random
+from home.games.shared import *
 '''
 returns:
     True: game ended
     False: game ongoing
 '''
-def game_combine_box(board: list[list[int]], direction: int):
-    cb_act(board, direction)
+def game_combine_box(board: list[list[int]], direction: int, score: int):
+    cb_act(board, direction, score)
     if cb_end(board):
         board = [[0] * 4 for _ in range (4)]
-    return board
-
-# Reset the board
-def cb_reset():
-    board = [[0] * 4 for _ in range(4)]
-    cb_generate_cell(board)
     return board
 
 # Gameover condition
@@ -23,25 +18,6 @@ def cb_end(board: list[list[int]]):
             if board[y][x] == 0:
                 return False
     return True
-
-# Print the board
-def cb_print(board: list[list[int]]):
-    print("=====================")
-    for row in board:
-        print(row)
-    print("=====================")
-    cb_act(board, random.randint(0, 3))
-    for row in board:
-        print(row)
-    print("=====================")
-    cb_act(board, random.randint(0, 3))
-    for row in board:
-        print(row)
-    print("=====================")
-    cb_act(board, random.randint(0, 3))
-    for row in board:
-        print(row)
-    print("=====================")
 
 # Create a new cell
 def cb_generate_cell(board: list[list[int]]):
@@ -59,7 +35,7 @@ directions:
     3 = up
 '''
 # Process elements
-def cb_act(board: list[list[int]], direction: int):
+def cb_act(board: list[list[int]], direction: int, score: int):
     if direction == 0:
         print('right')
         for y in range (4):
