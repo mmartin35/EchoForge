@@ -28,12 +28,12 @@
                     </ul>
                 </div>
                 <!-- Right elements -->
-                <div class="d-flex align-items-center" style="margin-right: 30px">
+                <div class="d-flex align-items-center">
                     <div class="dropdown">
-                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                            <i class="fas fa-bell">More options</i>
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                            <i class="fas fa-bell">{{ request.user.username }}</i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
                             <li>
                                 <a class="dropdown-item" href="#">My profile</a>
                             </li>
