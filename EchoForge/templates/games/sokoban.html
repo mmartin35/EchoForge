@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}Combine Box{% endblock %}
+{% block title %}Sokoban{% endblock %}
 {% load static %}
 
 {% block styles %}
-<link rel="stylesheet" href="{% static 'games/css/combine_box.css' %}">
+<link rel="stylesheet" href="{% static 'games/css/sokoban.css' %}">
 {% endblock %}
 
 {% block script %}
@@ -33,7 +33,6 @@
         <button type="submit" name="direction" value="1" class="btn btn-primary">Down</button>
         <button type="submit" name="direction" value="2" class="btn btn-primary">Left</button>
         <button type="submit" name="direction" value="3" class="btn btn-primary">Up</button>
-        <button type="submit" name="is_reset" value="True" class="btn secondary">Reset</button>
     </form>
 </div>
 {% endblock %}

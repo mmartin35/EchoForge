@@ -5,8 +5,6 @@ returns:
     False: game ongoing
 '''
 def game_combine_box(board: list[list[int]], direction: int):
-    if board[0][0] == 1:
-        cb_reset()
     cb_act(board, direction)
     if cb_end(board):
         board = [[0] * 4 for _ in range (4)]

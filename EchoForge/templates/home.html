@@ -1,13 +1,31 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <form class="nav-item" method="post" action="{% url 'logout' %}">
-        {% csrf_token %}
-            <a href="javascript:;" onclick="parentNode.submit()">Déconnection de {{ request.user.username }}</a>
-        </form>
-        <a href='combine_box'>combine_box</a>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% load static %}
+
+{% block styles %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block content %}
+<div class="card-list" style="display: flex">
+    <div class="card" style="width: 18rem; margin-right: 10px">
+        <img src="{% static 'images/games/2048.png' %}" class="card-img-top" alt="combine_box logo">
+        <div class="card-body">
+            <h5 class="card-title">Combine box</h5>
+            <p class="card-text">Just like 2048.</p>
+            <a href="{% url 'combine_box' %}">Play now</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem; margin-right: 10px">
+        <img src="{% static 'images/games/sokoban.png' %}" class="card-img-top" alt="sokoban logo">
+        <div class="card-body">
+            <h5 class="card-title">Sokoban</h5>
+            <p class="card-text">Puzzle game in which the player pushes boxes around in a warehouse, trying to get them to storage locations.</p>
+            <a href="{% url 'sokoban' %}">Play now</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

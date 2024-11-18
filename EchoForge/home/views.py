@@ -29,16 +29,22 @@ def home(request):
 def combine_box(request):
     board = request.session.get('board', [[1] * 4 for _ in range(4)])
     if request.method == 'POST':
-        directionForm = DirectionForm(request.POST)
         resetForm = ResetForm(request.POST)
+        directionForm = DirectionForm(request.POST)
+        if resetForm.is_valid():
+            print('reseted')
+            board = cb_reset()
         if directionForm.is_valid():
             direction = directionForm.cleaned_data['direction']
             board = game_combine_box(board, direction)
-        
-        if resetForm.is_valid():
-            board = cb_reset()
     request.session['board'] = board
     context = {
         'board': board,
     }
     return render(request, 'games/combine_box.html', context)
+
+def sokoban(request):
+    context = {
+        'board': 'NA',
+    }
+    return render(request, 'games/sokoban.html', context)
