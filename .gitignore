@@ -1,0 +1,7 @@
+.venv
+EchoForge/__pycache__
+EchoForge/__init__.py
+EchoForge/*/__pycache__
+EchoForge/*/*/__pycache__
+EchoForge/*/migrations/00*
+EchoForge/*/migrations/__pycache__/*
