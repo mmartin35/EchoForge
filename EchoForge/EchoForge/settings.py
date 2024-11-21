@@ -2,8 +2,15 @@ import os
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+u!$t%1@5vfr7(#_28e$&gjnz5i105ey!5p)&9yyn)rf7zf(%-'
-DEBUG = True
-ALLOWED_HOSTS = []
+
+# [DEV SETTINGS START]
+# DEBUG = True
+# [DEV SETTINGS END]
+# [PROD SETTINGS START]
+DEBUG = False
+ALLOWED_HOSTS = ['54.37.66.75', 'echoforge.user35p74a.fr']
+# [PROD SETTINGS END]
+
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
