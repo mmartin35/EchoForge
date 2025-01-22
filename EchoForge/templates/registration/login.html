@@ -1,26 +1,145 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
+            background-color: #f5f8fc;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 360px;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .login-container img {
+            width: 70px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+
+        .login-container h1 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 80%; /* Réduit la largeur des textboxes */
+            padding: 12px 15px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            background: #f9f9f9;
+            color: #333;
+            transition: border-color 0.3s ease;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .input-group input:focus {
+            border-color: #6e8efb;
+            outline: none;
+            box-shadow: 0 0 5px rgba(110, 142, 251, 0.3);
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        button {
+            width: 80%;
+            background: #6e8efb;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 0 auto;
+            display: block;
+        }
+
+        button:hover {
+            background: #5b79d1;
+            transform: scale(1.03);
+        }
+
+        .login-footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .login-footer a {
+            text-decoration: none;
+            color: #6e8efb;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Login</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-    </form>
+    <div class="login-container">
+        <!-- Logo -->
+        <img src="{% static 'images/app-icon.png' %}" alt="Logo">
+
+        <!-- Form -->
+        <h1>Login</h1>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            
+            <!-- Username -->
+            <div class="input-group">
+                <i>&#x1F4E7;</i> <!-- Icon for email -->
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <i>&#128274;</i> <!-- Icon for password -->
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Footer Links -->
+        <div class="login-footer">
+            <a href="#">Signup</a>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
 </body>
 </html>
